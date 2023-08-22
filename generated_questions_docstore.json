@@ -1,0 +1,1 @@
+{"faiss_index_factory_str": "Flat", "embedding_dim": 384, "faiss_config_path": "generated_questions_document_store.json"}

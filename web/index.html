@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  #top-bar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  #top-bar-title {
+    margin: 0;
+  }
+
+  #top-bar-highlight {
+    color: #ff9900;
+  }
+
+  #content-wrapper {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+
+  #embedded-map {
+    flex-grow: 1;
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
+
+  #contact-section {
+    background-color: #333;
+    color: white;
+    padding: 0px;
+    text-align: center;
+  }
+
+  #contact-section h2 {
+    margin: 20px 0;
+  }
+
+  /* Styling for the popup */
+  #popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  #popup-content {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var popup = document.getElementById("popup");
+    popup.style.display = "flex"; // Show the popup
+
+    // Close the popup when clicking outside of it
+    popup.addEventListener("click", function(event) {
+      if (event.target === popup) {
+        popup.style.display = "none";
+      }
+    });
+  });
+</script>
+<title>This Tourist map still is a bit sketchy</title>
+</head>
+<body>
+  <div id="top-bar">
+    <h1 id="top-bar-title"><span id="top-bar-highlight">This Tourist Map</span> still is a bit sketchy <span style="font-size: 14px;">🗺️</span></h1>
+  </div>
+  <div id="content-wrapper">
+    <iframe id="embedded-map" src="Map1.html"></iframe>
+  </div>
+  <div id="contact-section">
+    <h2>Author:</h2>
+    <p>Josep Maria Rocafort (Haradai):</p>
+    <p>Email: josem.rocafortf@gmail.com</p>
+    <p>Github: https://github.com/Haradai</p>
+  </div>
+  <!-- Popup window -->
+  <div id="popup">
+    <div id="popup-content">
+      WARNING! This is a for fun project. The content of this page has been generated using AI and might be inaccurate or even completely wrong. Use at your own risk.
+    </div>
+  </div>
+</body>
+</html>
+
